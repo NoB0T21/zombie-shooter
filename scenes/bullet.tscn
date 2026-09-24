@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dyi85y0qttjmf"]
+
+[ext_resource type="Script" uid="uid://6xa8odrdj3m" path="res://script/bullet.gd" id="1_mkf8s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ist4y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ist4y"]
+albedo_color = Color(0.93396485, 0.528153, 0.125521, 1)
+grow_amount = 0.222
+
+[node name="Bullet" type="Area3D" unique_id=559520212]
+script = ExtResource("1_mkf8s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=419313594]
+shape = SubResource("SphereShape3D_ist4y")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CollisionShape3D" unique_id=1719978099]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 4, 0, 0, 0)
+smooth_faces = false
+material = SubResource("StandardMaterial3D_ist4y")
+
+[node name="Timer" type="Timer" parent="CollisionShape3D" unique_id=672722919]
+wait_time = 10.0
+autostart = true

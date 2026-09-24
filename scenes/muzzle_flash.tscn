@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dwaoj6p2ot6tb"]
+
+[ext_resource type="Script" uid="uid://c1urunnobsx24" path="res://script/muzzle_flash.gd" id="1_r2kf7"]
+
+[node name="MuzzleFlash" type="Node3D" unique_id=1013314131]
+script = ExtResource("1_r2kf7")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1579289064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2620444, 4.300538, 1.259038)
+light_color = Color(0.92071044, 0.5361817, 5.7756904e-07, 1)
+light_energy = 2.6
+shadow_enabled = true
